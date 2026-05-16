@@ -26,7 +26,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ===================== HOLATLAR =====================
-CHOOSING_MONTH = 1
+ENTERING_TABEL = 1
+CHOOSING_MONTH = 2
 
 
 def is_authorized(user_id: int) -> bool:
