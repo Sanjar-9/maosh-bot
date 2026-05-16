@@ -51,8 +51,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("❌ Sizga ruxsat yo'q!")
         return ConversationHandler.END
 
+    await update.message.reply_text("Пожалуйста, введите табельный номер:")
+    return ENTERING_TABEL
+
+
+async def check_tabel(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if update.message.text.strip() != "4824":
+        await update.message.reply_text("❌ Табельный номер неверный. Попробуйте снова:")
+        return ENTERING_TABEL
+
     await update.message.reply_text(
-        "Выберите нужный месяц с помощью кнопок внизу. Для завершения сессии нажмите /start",
+        "Выберите нужный месяц с помощью кнопок внизу.\nДля завершения сессии нажмите /stop",
         reply_markup=get_month_keyboard()
     )
     return CHOOSING_MONTH
