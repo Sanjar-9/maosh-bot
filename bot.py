@@ -53,7 +53,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return ConversationHandler.END
 
     await update.message.reply_text(
-        "👋 Salom! Qaysi oyning maoshini ko'rmoqchisiz?\n\nOyni tanlang:",
+        "Выберите нужный месяц с помощью кнопок внизу. Для завершения сессии нажмите /stop",
         reply_markup=get_month_keyboard()
     )
     return CHOOSING_MONTH
@@ -73,7 +73,7 @@ async def get_salary(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return CHOOSING_MONTH
 
-    await update.message.reply_text(f"🔍 {chosen_month} uchun qidirilmoqda...")
+    await update.message.reply_text(f" {chosen_month} ")
 
     found_text = None
     try:
