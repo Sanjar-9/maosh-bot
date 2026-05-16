@@ -114,7 +114,7 @@ async def get_salary(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
     keyboard = ReplyKeyboardMarkup([["🔄 Qayta boshlash"]], resize_keyboard=True)
-    await update.message.reply_text("Boshqa oy uchun:", reply_markup=keyboard)
+    await update.message.reply_text("Boshqa oy uchun: /stop /start", reply_markup=keyboard)
     return ConversationHandler.END
 
 
