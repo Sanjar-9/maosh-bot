@@ -96,8 +96,7 @@ async def get_salary(update: Update, context: ContextTypes.DEFAULT_TYPE):
         logger.error(f"Xato: {e}")
 
     if found_text:
-        await update.message.reply_text(f"✅ {chosen_month} maoshi:\n\n{found_text}")
-    else:
+      
         await update.message.reply_text(
             f"❌ {chosen_month} uchun ma'lumot topilmadi.\n"
         
