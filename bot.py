@@ -6,7 +6,7 @@ from telegram.ext import (
 )
 
 # ===================== SOZLAMALAR =====================
-BOT_TOKEN = "8939987981:AAFSOMrMM7matU2H-Tub6a8KM2I4s6ny8_g"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_ID = -1003904454208      # Sizning kanal ID
 MY_TELEGRAM_ID = 323634120       # Sizning Telegram ID
 MAX_SEARCH_ID = 200              # Kanalda qidiradigan xabar soni
