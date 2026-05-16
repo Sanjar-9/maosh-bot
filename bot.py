@@ -137,6 +137,9 @@ def main():
             MessageHandler(filters.Regex("^🔄 Qayta boshlash$"), restart),
         ],
         states={
+            ENTERING_TABEL: [
+                MessageHandler(filters.TEXT & ~filters.COMMAND, check_tabel)
+            ],
             CHOOSING_MONTH: [
                 MessageHandler(filters.TEXT & ~filters.COMMAND, get_salary)
             ],
