@@ -52,7 +52,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return ConversationHandler.END
 
     await update.message.reply_text(
-        "Выберите нужный месяц с помощью кнопок внизу. Для завершения сессии нажмите /stop",
+        "Выберите нужный месяц с помощью кнопок внизу. Для завершения сессии нажмите /start",
         reply_markup=get_month_keyboard()
     )
     return CHOOSING_MONTH
@@ -100,7 +100,7 @@ async def get_salary(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text(
             f"❌ {chosen_month} uchun ma'lumot topilmadi.\n"
-            f"Kanalga {chosen_month} bilan boshlanadigan xabar yuklang."
+        
         )
 
     keyboard = ReplyKeyboardMarkup([["🔄 Qayta boshlash"]], resize_keyboard=True)
