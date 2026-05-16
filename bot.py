@@ -97,6 +97,8 @@ async def get_salary(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if found_text:
       
+        await update.message.reply_text(f" {chosen_month} \n\n{found_text}")
+    else:
         await update.message.reply_text(
             f"❌ {chosen_month} uchun ma'lumot topilmadi.\n"
         
