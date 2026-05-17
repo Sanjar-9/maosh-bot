@@ -14,6 +14,7 @@ MAX_SEARCH_ID = 200              # Kanalda qidiradigan xabar soni
 
 # Oylar ro'yxati
 MONTHS = [
+    "12.2025",
     "01.2026", "02.2026", "03.2026", "04.2026",
     
 ]
